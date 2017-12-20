@@ -1,0 +1,43 @@
+﻿@model Lasa.Models.Login
+
+@{
+    ViewBag.Title = "Login";
+}
+
+<h2>Login</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Sid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreateDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UpdateDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.Sid)
+        @Html.HiddenFor(model => model.CreateDate)
+        @Html.HiddenFor(model => model.UpdateDate)
+        <tr>
+            <td>
+                @Html.DisplayFor(model => model.Sid)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.CreateDate)
+            </td>
+            <td>
+                @Html.DisplayFor(model => model.UpdateDate)
+            </td>
+            <td><input type="submit" /></td>
+        </tr>
+    }
+
+</table>
+
