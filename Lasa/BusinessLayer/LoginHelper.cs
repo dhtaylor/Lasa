@@ -15,7 +15,7 @@ namespace Lasa.BusinessLayer
             string repositoryPath = ConfigurationManager.AppSettings["Repository"].ToString();
             string fileName = loginName;
 
-            string json = DataLayer.FileAccess.Read(repositoryPath, fileName);
+            string json = DataLayer.FileHelper.Read(repositoryPath, fileName);
 
             Login login = DataLayer.JsonHelper.ConvertJson<Login>(json);
 
@@ -29,7 +29,7 @@ namespace Lasa.BusinessLayer
 
             string json = DataLayer.JsonHelper.GetJson(login);
 
-            DataLayer.FileAccess.Write(repositoryPath, fileName, json);
+            DataLayer.FileHelper.Write(repositoryPath, fileName, json);
 
         }
     }

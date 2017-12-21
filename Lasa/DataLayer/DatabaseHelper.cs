@@ -6,7 +6,7 @@ using System.Data.SqlClient;
 
 namespace Lasa.DataLayer
 {
-    public class DataAccess
+    public class DatabaseHelper
     {
         static string connstr = ConfigurationManager.ConnectionStrings["Lasa"].ConnectionString;
 

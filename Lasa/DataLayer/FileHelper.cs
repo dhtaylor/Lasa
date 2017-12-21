@@ -6,7 +6,7 @@ using System.IO;
 
 namespace Lasa.DataLayer
 {
-    public class FileAccess
+    public class FileHelper
     {
         //* Read operation
         public static string Read(string path, string file)
